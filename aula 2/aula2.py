@@ -1,0 +1,5 @@
+print ("Exercício 2")
+x = int(input ("Qual foi a quantidade de dias em que o carro ficou alugado?"))
+y = float(input("quantos km foi percorrido pelo carro durante o aluguel?"))
+p = (60*x) + (0.15 * y)
+print ("o preço total a pagar será R$ %f" % p)
