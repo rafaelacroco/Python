@@ -1,6 +1,6 @@
-vh = float(input ("Digite o valor da hora trabalhada:"))
+v_h = float(input ("Digite o valor da hora trabalhada:"))
 nh = int (input ("Digite o número de horas trabalhadas no mês:"))
-Salário_bruto = (vh*nh)
+Salário_bruto = (v_h*nh)
 Ir = Salário_bruto * (11/100)
 Inss = Salário_bruto * (8/100) 
 Sindicato = Salário_bruto * (5/100)
