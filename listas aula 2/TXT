@@ -1,0 +1,11 @@
+# CONCATENAÇÃO: você tem duas listas e soma elas. formando uma nova lista
+#ou pode usar lista1.extend(lista2)nesse caso você não cria outra lista, apenas printa a lista 1
+
+#REPETIÇÃO: CRIA UMA LISTA NOVA E MULTIPLICA PELA QUANTIDADE VEZES QUE VOCÊ QUER REPITILA
+
+#FUNÇÃO MAP(): aplica uma função sobre toda a lista
+#FUNÇÃO FILTER():
+
+#estudar lambda pág 11
+
+#list comprehension
