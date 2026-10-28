@@ -11,18 +11,21 @@
 # ▶ 0- Sair
 contatos = []
 
-# def carregarContatos():
-# def salvarContatos():
+def carregarContatos():
+    return
+def salvarContatos():
+    return
 
 def novoContato():
     nome = input("Digite o nome: ")
     sobrenome = input("Digite o sobrenome: ")
     telefone = input("Digite o telefone: ")
     email = input("Digite e-mail: ")
+
     novo = {"nome":nome, "sobrenome":sobrenome, "telefone":telefone, "email":email}
-    contatos.append(novo)
 
     print("Contato criado com sucesso")
+    contatos.append(novo)
 
 def exibeContato(contato):
     print(f"Nome: {contato["nome"]}\nsobrenome: {contato["sobrenome"]}")
@@ -42,24 +45,28 @@ def exibeMenu():
     print("4- Apaga contato")
     print("0- Sair")
 
-def processaMenu():
+def processaMenu(menu):
     if menu == 1:
         novoContato()
-        print()
+        print(contatos)
+        return True
     elif menu == 2:
         buscarContato()
+        return True
     elif menu == 3:
         atualizarContato()
+        return True
     elif menu == 4:
         apagarContato()
+        return True
     elif menu == 0:
         return False
     return False
 
 while True:
-    # carregarContatos()
+    carregarContatos()
     exibeMenu()
     menu = int(input())
     if (not processaMenu(menu)):
         break
-    # salvarContatos()
+    salvarContatos()
