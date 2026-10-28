@@ -1,8 +1,19 @@
-contatos = []
+import os
 
+contatos = []
+nome_arquivo = "contatos.txt"
 def carregarContatos():
-    return
+    if not os.path.exists(nome_arquivo):
+        return
+    with open(nome_arquivo, "r") as arquivo:
+        for linha in arquivo:
+            nome, sobrenome, telefone, email = linha.strip().split(";")
+            contatos.append({"nome":nome, "sobrenome":sobrenome, "telefone":telefone, "email":email})
+
 def salvarContatos():
+    with open(nome_arquivo, "w") as arquivo:
+        for c in contatos:
+            arquivo.write(f"{c['nome']};{c['sobrenome']};{c['telefone']}; {c['email']}")
     return
 
 def novoContato():
@@ -47,15 +58,17 @@ def processaMenu(menu):
         return True
     elif menu == 4:
         apagarContato()
+        #contatos.remove()
         return True
     elif menu == 0:
         return False
-    return False
+    return False #significa ou qualquer outra coisa apresentada que seja diferente das infos acima.
+
+carregarContatos()
 
 while True:
-    carregarContatos()
     exibeMenu()
     menu = int(input())
     if(not processaMenu(menu)):
        break
-    salvarContatos()
+salvarContatos()
